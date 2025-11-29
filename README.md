@@ -87,7 +87,7 @@ geofence-service/
 npm install
 ```
 
-###  Create .env  
+###  Create .env with below port  
 Copy `.env.example`:
 
 ```
