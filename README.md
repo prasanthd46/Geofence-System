@@ -118,7 +118,7 @@ http://localhost:3000
 ### **1. Update vehicle location**  
 **POST** `/api/location/update`
 
-#### Body:
+#### Sample Request Body:
 ```json
 {
   "vehicleId": "v1",
@@ -127,14 +127,22 @@ http://localhost:3000
 }
 ```
 
-#### Response:
+#### Sample Response:
 ```json
 {
-  "vehicleId": "v1",
-  "currentZoneId": "zone1",
-  "event": "ENTER",
-  "lastLocation": { ... },
-  "lastUpdated": "2025-11-29T..."
+    "success": true,
+    "data": {
+        "updatedState": {
+            "vehicleId": "v1",
+            "currentZoneId": "zone1",
+            "location": {
+                "latitude": 12.972,
+                "longitude": 77.6
+            },
+            "lastUpdated": "2025-11-29T18:26:14.580Z"
+        },
+        "event": "ENTER"
+    }
 }
 ```
 
@@ -148,13 +156,20 @@ Example:
 GET /api/location/vehicle/v1/status
 ```
 
-#### Response:
+#### Sample Response:
 ```json
 {
-  "vehicleId": "v1",
-  "currentZoneId": "zone1",
-  "lastLocation": { ... },
-  "lastUpdated": "2025-11-29T..."
+    "success": true,
+    "data": {
+        "vehicleId": "v1",
+        "currentZoneId": "zone1",
+        "zone": "North Park",
+        "lastLocation": {
+            "latitude": 12.972,
+            "longitude": 77.6
+        },
+        "lastUpdated": "2025-11-29T18:26:14.580Z"
+    }
 }
 ```
 
@@ -174,7 +189,7 @@ GET /api/location/vehicle/v1/status
 
 ---
 
-## 🚨 Edge Cases Handled
+## Edge Cases Handled
 
 -> Vehicle starts outside zones  
 -> Enter zone  
