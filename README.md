@@ -215,29 +215,26 @@ GET /api/location/vehicle/v1/status
 
 ## Improvements with More Time
 
-### 🔹 Add Redis/Postgres
+### Add Redis/Postgres
 Store:
 - vehicle states  
 - history of zone events  
-- replay movement  
+
 So that system will be fault tolerant and can handle scale.
 
-### 🔹 Add Kafka/SQS ingestion  
+### Add Kafka/SQS ingestion  
 Scale to thousands of vehicle updates/second.
 
-### 🔹 Add unit & integration tests  
+###  Add unit & integration tests  
 Better reliability.
 
-### 🔹 Add Prometheus metrics  
+###  Add Prometheus metrics  
 Track latency, throughput, error rates.
 
-### 🔹 Add Dockerfile  
+###  Add Dockerfile  
 Portable deployment.
 
-### 🔹 Add GPS noise smoothing  
-Handle jittering location signals.
-
-### 🔹 Add map visualization  
+###  Add map visualization  
 Better debugging experience.
 
 ---
